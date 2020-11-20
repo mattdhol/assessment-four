@@ -1,0 +1,47 @@
+body {
+    text-align: center;
+    margin: 2rem;
+}
+
+h1 {
+size: 35px;
+font-weight: 700;
+letter-spacing: .01em;
+text-shadow: .022em .022em .022em #111;
+color:silver;
+font-family: 'Dancing Script', cursive;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+.formmain {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+*{
+text-align: center;
+}
+
+.card{
+max-width: 1150px;
+margin-left: auto;
+margin-right: auto;
+position: center;
+}
+
+.striped{
+    margin: auto;
+}
+.taskform{
+max-width: 1150px;
+background-color: green;
+position: relative;
+border: green;
+border-style: solid;
+font-family: 'Montserrat', sans-serif;    
+}

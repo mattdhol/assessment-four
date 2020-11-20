@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<h1>Tedious Tasks</h1>
+
+
+<table class="table table-dark">
+    <thead>
+    <tr>
+      <th>Description</th>
+      <th>Person</th>
+      <th>Time</th>
+      <th>Delete</th>
+    </thead>
+  <tbody>
+      {% for task in task %}
+    <a href="/task/{{ task.id }}">
+      <td>{{ task.description}}</td>
+    </a>
+      <td>{{task.person}}</td>
+      <td> {{task.time}}</td>
+
+      <td> <a href="{% url 'task_delete' task.id %}">Delete</a></td>
+    </tr>
+    {% endfor %}
+      <td><h1>Total Time:</h1></td>
+      <td>
+    </td>
+    <td>{{sum_timee}}</td>
+    </tbody>
+</table>
+</body>
+</html>
+
+<h1><a href="{% url 'task_create' %}" class="btn btn-secondary">Add a Task</a></h1>
+
+
+      
